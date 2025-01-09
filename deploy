@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Building website..."
+bundle exec jekyll build
+echo "Adding CNAME"
+cp CNAME docs/
+echo "Commiting to Git"
+git add -A
+git commit -m "build $(LANG=en date)"
+echo "Deploying..."
+git push

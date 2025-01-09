@@ -1,0 +1,50 @@
+@mixin graella($n-columnas) {
+	@media (min-width: $bp-min-mobile-big) {
+		display: grid;
+		grid-template-columns: repeat(#{$n-columnas}, 1fr);
+		grid-template-rows: auto;
+		grid-gap: var(--gc-gap);
+		grid-column-gap: var(--gc-gap);
+		grid-row-gap: 0;
+	}
+}
+
+@mixin graella-base($n-columnas) {
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--gr-gap);
+	@media (min-width: $bp-min-mobile-big) {
+		display: grid;
+		grid-template-columns: repeat(#{$n-columnas}, 1fr);
+		grid-template-rows: auto;
+		grid-gap: var(--gc-gap);
+		grid-column-gap: var(--gc-gap);
+		grid-row-gap: var(--gr-gap);
+		align-items: start;
+	}
+}
+
+@mixin graella-base2($n-columnas) {
+	display: grid;
+	grid-template-columns: repeat(#{$n-columnas}, 1fr);
+	grid-template-rows: auto;
+	grid-gap: var(--gc-gap);
+	grid-column-gap: var(--gc-gap);
+	grid-row-gap: var(--gr-gap);
+	align-items: start;
+}
+
+@mixin graella-variable($n-columnas, $gap-col, $gap-row) {
+	display: flex;
+	flex-direction: column;
+	row-gap: var(--gr-gap);
+	@media (min-width: $bp-min-mobile-big) {
+		display: grid;
+		grid-template-columns: repeat(#{$n-columnas}, 1fr);
+		grid-template-rows: auto;
+		grid-gap: $gap-col;
+		grid-column-gap: $gap-col;
+		row-gap: $gap-row;
+		align-items: start;
+	}
+}

@@ -1,0 +1,170 @@
+$temps: 0.3s;
+
+// Efecte de tot
+@mixin efecte-all {
+	transition: all $temps;
+}
+
+// Efecte imatge ampliada
+
+@mixin efecte-img__scale {
+	transform-origin: center;
+	transform: scale(1.025);
+	-webkit-transform-origin: center;
+	-webkit-transform: scale(1.025);
+}
+
+// Efecte boto
+@mixin efecte-boto {
+	transition: background-color $temps;
+}
+@mixin efecte-boto__label {
+	transition: color $temps;
+	-webkit-transition: color $temps;
+	-moz-transition: color $temps;
+	-ms-transition: color $temps;
+	-o-transition: color $temps;
+}
+@mixin efecte-boto__icon {
+	transition: color $temps;
+	-webkit-transition: color $temps;
+	-moz-transition: color $temps;
+	-ms-transition: color $temps;
+	-o-transition: color $temps;
+}
+
+// Efecte link a dintre d'una p
+@mixin efecte-link__a {
+	transition: all $temps;
+}
+
+// Efecte link subratllat d'esquerra a dreta amb subretllat
+@mixin efecte-link1($color) {
+	display: inline;
+	width: fit-content;
+	background-position: 0 100%;
+	background-size: 0% 0.2rem;
+	transform-origin: right;
+	transition: background-size $temps;
+
+	&:hover {
+		background: transparent linear-gradient(90deg, #{$color} 50%, #{$color} 0) no-repeat;
+		background-position: 0 100%;
+		background-size: 100% 0.2rem;
+		transition: background-size $temps;
+	}
+}
+
+@mixin efecte-link1--hover($color) {
+	background: transparent linear-gradient(90deg, #{$color} 50%, #{$color} 0) no-repeat;
+	background-position: 0 100%;
+	background-size: 100% 0.2rem;
+	transition: background-size $temps;
+}
+
+// Efecte link subratllat d'esquerra a dreta amb subretllat
+@mixin efecte-link2($color1, $color2) {
+	display: inline;
+	width: fit-content;
+	background: transparent linear-gradient(90deg, #{$color1} 50%, #{$color2} 0) no-repeat;
+	background-position: 100% 100%;
+	background-size: 200% 0.2rem;
+	transform-origin: right;
+	transition: background-position $temps;
+
+	&:hover {
+		background-position: 0 100%;
+		transition: background-position $temps;
+	}
+}
+
+@mixin efecte-link-bg {
+	display: inline;
+	width: fit-content;
+	background-size: 0% 100%;
+	transform-origin: right;
+}
+
+@mixin efecte-link-bg--hover($color) {
+	// color: #{$color};
+	background: transparent linear-gradient(90deg, #{$color} 50%, #{$color} 0) no-repeat;
+	background-position: 0 100%;
+	background-size: 100% 100%;
+	transition: background-size $temps;
+}
+
+// Adaptar text amb salts de línia i guions
+@mixin adaptar_text {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+// Efecte pantalla negra
+@mixin efecte-pantalla_negra($color) {
+	position: relative;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #{$color};
+		opacity: 0.15;
+	}
+}
+
+@mixin efecte-pantalla_negra--hover {
+	opacity: 0;
+	@include efecte-all;
+}
+
+// Img Responsive
+@mixin img_responsive($maxWidth, $aspectRatio) {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: #{$maxWidth};
+	height: auto;
+	overflow: hidden;
+	aspect-ratio: #{$aspectRatio};
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Efecte link subratllat d'esquerra a dreta amb subretllat
+@mixin efecte-link2($color1, $color2) {
+	display: inline;
+	width: fit-content;
+	background: transparent linear-gradient(90deg, #{$color2} 50%, #{$color1} 0) no-repeat;
+	background-position: 100% 100%;
+	background-size: 200% 0.2rem;
+	transform-origin: right;
+	transition: background-position $temps;
+	line-height: 160%;
+
+	&:hover {
+		background-position: 0 100%;
+		transition: background-position $temps;
+	}
+}

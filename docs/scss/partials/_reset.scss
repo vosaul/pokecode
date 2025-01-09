@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+}
+
+abbr,
+address,
+article,
+aside,
+audio,
+b,
+blockquote,
+body,
+caption,
+cite,
+code,
+dd,
+del,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+hr,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+p,
+pre,
+q,
+samp,
+section,
+small,
+span,
+strong,
+sub,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+ul,
+var,
+video,
+a {
+  background: transparent;
+  border: 0;
+  font-weight: inherit;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: inline-block;
+  position: relative;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}

@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.fa-metadecidim {
+  position: relative;
+}
+
+.fa-metadecidim::before {
+  background-image: url(/assets/img/metadecidim.svg);
+  background-size: contain;
+  height: 1.4em;
+  width: 1.4em;
+  content: ' ';
+  top: -1em;
+  left: -0.7em;
+  position: absolute;
+  display: block;
+}

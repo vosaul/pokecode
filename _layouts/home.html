@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% if site.show-nav-menu %}
+  {% include nav.html%}
+{% endif %}
+
+<div class="mx-auto text-center prose prose-{{site.theme-color}}">
+  <div>
+    <img class="object-cover mx-auto h-60 w-42 rounded-full" src="{{site.baseurl_root}}/assets/img/{{site.author-image}}"
+      alt="author profile image">
+    <h1>{{site.author}}</h1>
+  </div>
+  <p class="text-gray-500 pb-4">{{content}}</p>
+</div>
+</div>
+
+{% include social-media.html github=site.github twitter=site.twitter email=site.email metadecidim=site.metadecidim %}
+{% include footer.html %}

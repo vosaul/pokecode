@@ -1,0 +1,213 @@
+#equip {
+	.modul__grid {
+		@include graella-variable(12, var(--gc-gap), 0);
+	}
+
+	.equip__header {
+		grid-column: 2/-6;
+		// margin-top: 4rem;
+		@media (max-width: $bp-mobile-big) {
+			order: 2;
+			margin-top: -4.4rem;
+		}
+	}
+
+	.equip__img {
+		grid-column: -6/-3;
+		margin-inline: auto;
+		@include img_responsive("100%", "1.4/1.2");
+		margin-top: -5.6rem;
+		margin-top: -3.2rem;
+		@media (max-width: $bp-mobile-big) {
+			order: 1;
+			margin-top: 0;
+			max-width: 15.5rem;
+			margin-inline: auto 0;
+		}
+	}
+
+	.equip__content {
+		grid-column: 1/-1;
+		@include graella-variable(4, calc(var(--gc-gap) * 1.6), calc(var(--gc-gap) * 1.6));
+		margin: 6.4rem auto;
+		width: 100%;
+		@media (max-width: $bp-mobile-big) {
+			order: 3;
+			margin-top: 2.4rem;
+			max-width: fit-content;
+		}
+	}
+
+	.card-equip {
+		position: relative;
+		border-radius: 0.8rem;
+		isolation: isolate;
+
+		@media (max-width: $bp-mobile-big) {
+			max-width: 75vw;
+			&:not(:last-of-type) {
+				margin-bottom: 2.4rem;
+			}
+		}
+
+		&:nth-child(1) {
+			// --c-bg-card: var(--c-red);
+			// transform: rotate(359deg);
+
+			& .card-equip__img {
+				justify-content: flex-end !important;
+			}
+		}
+
+		&:nth-child(2) {
+			// --c-bg-card: var(--c-blau);
+			// transform: translateY(0.8rem);
+			// transform: rotate(1deg);
+		}
+
+		&:nth-child(3) {
+			// --c-bg-card: var(--c-primary);
+			// transform: rotate(1deg);
+		}
+
+		--c-bg-card: var(--c-primary);
+
+		&__box-level {
+			z-index: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 2rem;
+			left: 2.4rem;
+		}
+
+		&__num {
+			font-family: var(--ff-secundary);
+			font-size: 2.4rem;
+			line-height: 100%;
+			color: var(--c-black);
+		}
+
+		&__level {
+			font-family: var(--ff-secundary);
+			font-size: 1.2rem;
+			line-height: 110%;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			background-color: var(--c-bg-card);
+			margin-top: 0.4rem;
+			padding: 0.8rem 1rem;
+			border-radius: 0 1.2rem 1.2rem 1.2rem;
+		}
+
+		&__img {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			isolation: isolate;
+			overflow: hidden;
+			padding: 2.4rem 2.4rem 0;
+			background-color: var(--c-white);
+			border-radius: 0.8rem 0.8rem 0 0;
+			img {
+				width: 90%;
+				height: 90%;
+				-o-object-fit: cover;
+				object-fit: cover;
+			}
+			&:before {
+				position: absolute;
+				content: "";
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				// background-color: var(--c-bg-card);
+				// opacity: 0.2;
+
+				background-color: var(--c-secundary);
+				z-index: -2;
+			}
+			&:after {
+				position: absolute;
+				content: "";
+				top: 5rem;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 100%;
+				height: 100%;
+				max-width: 22rem;
+				max-height: 22rem;
+				aspect-ratio: 1/1;
+				// background-color: var(--c-bg-card);
+				// background-color: var(--c-white);
+				z-index: -1;
+				border-radius: 100%;
+			}
+		}
+
+		&__box-dades {
+			position: relative;
+			padding: 2.4rem 2.4rem 1.6rem;
+			background-color: var(--c-bg-card);
+			border-radius: 0 0 0.8rem 0.8rem;
+			min-height: 14.2rem;
+		}
+
+		&__avatar {
+			width: 4.8rem;
+			height: 4.8rem;
+			margin-top: -4.8rem;
+			margin-bottom: 1rem;
+			overflow: hidden;
+			aspect-ratio: 1/1;
+			border-radius: 100%;
+			background-color: var(--c-white);
+
+			img {
+				width: 100%;
+				height: 100%;
+				-o-object-fit: cover;
+				object-fit: cover;
+			}
+		}
+
+		&__nom {
+			font-family: var(--ff-secundary);
+			font-size: 20px;
+			line-height: 120%;
+			letter-spacing: 0.02em;
+			margin-bottom: 0.32em;
+		}
+
+		&__carrec {
+			font-family: var(--ff-secundary);
+			font-size: 11px;
+			line-height: 118%;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		&__xarxes {
+			display: flex;
+			justify-content: flex-end;
+			gap: 0.6rem;
+			margin-top: 1.6rem;
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 1.6rem;
+				height: 1.6rem;
+				padding: 1.6rem;
+				border-radius: 100%;
+				background-color: var(--c-white);
+				font-size: var(--fs-24);
+			}
+		}
+	}
+}

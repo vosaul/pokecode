@@ -1,0 +1,135 @@
+// Hero Image
+
+.home-hero {
+	visibility: hidden;
+	position: relative;
+	isolation: isolate;
+	width: 100%;
+	height: 100vh;
+	max-height: 94.6rem;
+	background-color: var(--c-primary);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	// @media (min-height: 720px) {
+	// 	max-height: 72rem !important;
+	// }
+
+	// Grid
+	&__grid {
+		position: relative;
+		z-index: 1;
+		height: 100%;
+		// padding: var(--mg-b-112) var(--pd-out);
+		padding: 6.4rem var(--pd-out) 0;
+		@include graella(12);
+		@media (max-width: $bp-mobile-big) {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			row-gap: 1rem;
+			padding: 4.8rem var(--pd-out) 0;
+		}
+	}
+
+	// Text Fullsize
+	&__text {
+		z-index: 1;
+		grid-column: 1/6;
+		display: flex;
+		align-items: center;
+		@media (max-width: $bp-mobile-big) {
+			order: 2;
+		}
+
+		h1 {
+			font-family: var(--ff-secundary);
+			font-size: var(--fs-80);
+			color: var(--c-black);
+			line-height: 100%;
+		}
+	}
+
+	// Imatge
+
+	&__img {
+		grid-column: 6/-1;
+		justify-self: center;
+		align-self: center;
+		margin-top: -8vh;
+
+		img {
+			max-width: 90vh;
+		}
+		@media (max-width: $bp-mobile-big) {
+			order: 1;
+			margin-top: 2rem;
+			margin-left: -3vw;
+			img {
+				max-width: 78%;
+			}
+		}
+	}
+
+	// Banner
+
+	&__banner {
+		position: fixed;
+		z-index: 1;
+		bottom: 4rem;
+		left: var(--pd-out);
+		display: flex;
+		align-items: center;
+		column-gap: 0.4rem;
+		background-color: var(--c-red);
+		font-family: var(--ff-secundary);
+		font-size: var(--fs-16);
+		letter-spacing: 0.04em;
+		color: var(--c-white);
+		padding: 1.6rem 1.6rem 1.4rem;
+		border-radius: 6.4rem;
+
+		.big {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2rem;
+			color: var(--c-red);
+			background-color: white;
+			padding: 0.25em;
+			aspect-ratio: 1/1;
+			border-radius: 100%;
+			margin-right: 0.7rem;
+
+			sup {
+				vertical-align: top;
+				font-size: 0.6em;
+				text-decoration: underline;
+			}
+		}
+
+		.icon {
+			font-size: 2.6rem;
+			padding-bottom: 7px;
+			margin-right: 0.6rem;
+			&:before {
+				color: var(--c-white) !important;
+			}
+		}
+
+		@media (max-width: $bp-mobile-big) {
+			padding: 1.2rem 1.2rem 1.2rem;
+			font-size: var(--fs-14);
+
+			.big {
+				font-size: 1.8rem;
+			}
+
+			.icon {
+				margin-right: 0.8rem;
+			}
+		}
+	}
+}

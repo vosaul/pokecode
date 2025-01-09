@@ -1,0 +1,79 @@
+<section>
+  <div class="flex flex-wrap text-center">
+    <div class="w-full pt-4">
+      <div>
+        {% if include.twitter %}
+        <a href="{{include.twitter}}" target="_blank"><button
+            class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-twitter"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.facebook %}
+        <a href="{{include.facebook}}" target="_blank"><button
+            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-facebook"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.instagram %}
+        <a href="{{include.instagram}}" target="_blank"><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-instagram"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.github %}
+        <a href="{{include.github}}" target="_blank"><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-github"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.linkedin %}
+        <a href="{{include.linkedin}}" target="_blank"><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-linkedin"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.medium %}
+        <a href="{{include.medium}}" target="_blank"><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-medium"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.google-scholar %}
+        <a href="{{include.google-scholar}}" target="_blank"><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fas fa-graduation-cap"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.metadecidim %}
+        <a href="{{include.metadecidim}}" target="_blank"><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-metadecidim"></i>
+          </button></a>
+        {% endif %}
+
+        {% if include.email %}
+        <a href="mailto:{{include.email}}" target="_blank"><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fas fa-envelope"></i>
+          </button></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

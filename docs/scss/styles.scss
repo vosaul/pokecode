@@ -1,0 +1,61 @@
+@import "partials/reset", "partials/fonts", "partials/variables", "partials/mixins", "partials/grid", "partials/btns",
+	"partials/fullsize", "partials/header", "partials/menu", "partials/modul", "partials/serveis", "partials/clients",
+	"partials/equip", "partials/slider", "partials/footer", "partials/home-hero", "partials/pagina";
+
+body,
+html {
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: var(--ff-primary);
+	font-size: 62.5%;
+	color: var(--c-black);
+	@media (max-width: 321px) {
+		font-size: 52.6315%;
+	}
+	@media (min-width: $bp-min-desktop-xxl) {
+		// font-size: 67.789473684210526%;
+		font-size: 69.4445%;
+	}
+	@media (min-width: $bp-desktop-4k) {
+		font-size: 128.453947368421053%;
+	}
+	@media (min-width: $bp-min-mobile-big) {
+		overflow: auto !important;
+	}
+}
+
+.amagar {
+	display: none !important;
+}
+
+// #serveis {
+// 	display: none;
+// }
+
+// #clients {
+// 	display: none;
+// }
+
+// Links
+
+.link {
+	display: flex;
+	align-items: center;
+
+	&__text {
+		font-size: var(--fs-17);
+		color: var(--c-grey);
+		letter-spacing: -0.012em;
+		@include efecte-link();
+	}
+
+	&:hover &__text {
+		@include efecte-link--hover(var(--c-primary));
+	}
+
+	&_icon {
+		width: 32px;
+		height: 32px;
+	}
+}

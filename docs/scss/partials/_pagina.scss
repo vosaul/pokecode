@@ -1,0 +1,95 @@
+.site-main {
+	width: 100%;
+}
+
+#pagina {
+	background-color: var(--c-primary);
+
+	.modul__grid {
+		@include graella-variable(12, var(--gc-gap), 0);
+	}
+
+	.clients__text {
+		grid-column: 3/11;
+
+		h1 {
+			font-family: var(--ff-secundary);
+			font-size: var(--fs-72);
+			line-height: 120%;
+			color: var(--c-black);
+			margin-bottom: 4.8rem;
+		}
+		h3 {
+			font-family: var(--ff-secundary);
+			font-size: var(--fs-18);
+			line-height: 120%;
+			color: var(--c-black);
+			margin-bottom: 1.6rem;
+
+			&:not(:first-of-type) {
+				margin-top: 4rem;
+			}
+		}
+		p,
+		li {
+			font-size: var(--fs-18);
+			line-height: 160%;
+			letter-spacing: 0.01em;
+			margin-bottom: 1rem;
+
+			a {
+				text-decoration: underline;
+				font-weight: bold;
+
+				&:hover {
+				}
+			}
+		}
+		b {
+			font-weight: bold;
+		}
+		ul {
+			padding-left: 2rem;
+			margin-bottom: 2rem;
+			li {
+				position: relative;
+				&:before {
+					content: "";
+					width: 0.5rem;
+					height: 0.5rem;
+					background: var(--c-black);
+					border-radius: 100%;
+					position: absolute;
+					top: 1rem;
+					left: -1rem;
+				}
+			}
+		}
+	}
+
+	.clients__logos {
+		grid-column: 2/-2;
+		margin-top: 8rem;
+		@media (max-width: $bp-mobile-big) {
+			margin-top: 2.4rem;
+		}
+
+		&__container {
+			@include graella-variable(5, var(--gc-gap), var(--gc-gap));
+			justify-items: center;
+
+			img {
+				max-width: 75%;
+			}
+			@media (max-width: $bp-mobile-big) {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				gap: 2.4rem;
+				img {
+					max-width: calc(33% - 2.4rem);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,92 @@
+// Mòduls
+
+.modul {
+	position: relative;
+	width: 100%;
+	background-color: var(--c-white);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	// Grid
+	&__grid {
+		position: relative;
+		z-index: 1;
+		padding: var(--mg-b-112) var(--pd-out);
+		@include graella-base(12);
+	}
+
+	//Header
+	&__header {
+		grid-column: 1/-6;
+		display: flex;
+		flex-direction: column;
+
+		h2 {
+			font-family: var(--ff-secundary);
+			font-size: var(--fs-72);
+			line-height: 120%;
+			color: var(--c-black);
+			margin-bottom: 1.6rem;
+		}
+
+		p {
+			font-size: var(--fs-32);
+			line-height: 130%;
+			color: var(--c-black);
+			letter-spacing: -0.013em;
+			margin-bottom: 1.6rem;
+
+			&.small {
+				font-size: var(--fs-15);
+				line-height: 130%;
+			}
+			a {
+				@include efecte-link2(var(--c-black), var(--c-primary));
+			}
+			.destecat {
+				background-color: var(--c-primary);
+
+				&--negatiu {
+					background-color: var(--c-white);
+				}
+			}
+		}
+	}
+
+	.asterisc {
+		color: var(--c-black);
+	}
+
+	p.small {
+		grid-column: 9/-2;
+		font-size: var(--fs-15);
+		line-height: 140%;
+		letter-spacing: -0.013em;
+		color: var(--c-black);
+
+		@media (min-width: $bp-min-mobile-big) {
+			margin-top: 3.2rem;
+		}
+	}
+
+	// Content
+	&__content {
+		grid-column: 1/-1;
+		@include graella-base(12);
+	}
+
+	&__content--slider {
+		position: relative;
+		grid-column: 1/-1;
+		align-self: stretch;
+		margin-top: 8rem;
+		@media (max-width: $bp-mobile-big) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: calc(100vw - (var(--pd-out) * 2));
+		}
+	}
+}

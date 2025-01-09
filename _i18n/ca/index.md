@@ -1,0 +1,1 @@
+Solucions digitals per la democràcia del segle XXI, basta en [Decidim](https://decidim.org)

@@ -1,0 +1,56 @@
+destination: docs/
+
+# change the followings to match your Github username and repo name
+# baseurl: "" # the name of your github repo
+url: "https://pokecode.net" # the url of your github pages
+
+# site information used in page title, meta data etc.
+title: "PokeCode.net :: Digital Solutions for the democracy of the XXI century"
+description: "Developing Digital democracy and participation based on Decidim and Ruby on Rails."
+
+# color theme for links
+theme-color: stone # indigo|yellow|pink|green|stone|
+
+languages: ["en", "ca"]
+exclude_from_localizations: ["assets"]
+
+# homepage information
+author: PokeCode
+author-image: pokecode-logo.png  # file must be in the /assets/img/ folder
+
+# navigation menu
+show-nav-menu: true
+
+nav-menu:
+- text: About
+  permalink: about
+  namespace: about
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/seo-pokecode-logo.png
+
+# use false to turn off any social media links
+twitter: false
+facebook: false
+instagram: false
+github: https://github.com/openpoke
+linkedin: false
+medium: false
+google-scholar: false
+email: info@pokecode.net
+metadecidim: "https://meta.decidim.org/profiles/Pokecode"
+
+# footer information
+footer-msg: "Made with ❤️ by PokeCode"
+footer-msg-link: "https://github.com/openpoke/pokecode.net"
+
+# google analytics
+google-analytics: false
+
+# jekyll plugins - no need to change
+plugins:
+  - jekyll-seo-tag
+  - jekyll-multiple-languages-plugin

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="follow" />
+		<title>PokeCode -- Solucions tècniques per requisits democràtics</title>
+		<meta
+			name="description"
+			content="Plataforma digital de votació i participació digital per ajuntaments i organitzacions"
+		/>
+		<meta name="keywords" content="votacions, participació digital, codi lliure, pressupost participatiu" />
+		<!-- Favicon -->
+		<link rel="icon" href="imgs/icon/favicon.png" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" media="all" />
+		<!-- Swiper-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<!-- GSAP  -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+		<!--Plausible-->
+		<script defer data-domain="pokecode.net" src="https://analytics.dev.pokecode.net/js/plausible.js"></script>
+	</head>
+
+	<body class="home">
+		<div id="page" class="site">
+			<!-- Header -->
+			<header id="masthead" class="site-header">
+				<!-- Logo -->
+				<div class="site-branding">
+					<a href="">
+						<div id="logo"><span class="icon icon-pokecode"></span></div>
+					</a>
+				</div>
+				<!-- ...Logo -->
+				<!-- Menu -->
+				<nav id="site-navigation" class="main-navigation">
+					<!-- Boto Burger -->
+					<button class="btn-burger menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<span class="icon icon-burger"></span><span class="icon icon-close"></span>
+					</button>
+					<!-- ...Boto Burger -->
+					<div id="container-menu" class="safe-area--mobile">
+						<!-- Menú -->
+						<ul id="primary-menu" class="navbar-nav nav-menu">
+							<li class="menu-item menu-item-type-post_type menu-item-object-page nav-item">
+								<a href="#serveis" class="nav-link">Serveis</a>
+							</li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page nav-item">
+								<a href="#clients" class="nav-link">Clients</a>
+							</li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page nav-item">
+								<a href="#equip" class="nav-link">Equip</a>
+							</li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page nav-item">
+								<a href="#contacte" class="nav-link">Contacte</a>
+							</li>
+						</ul>
+						<!-- Idiome -->
+						<ul id="secundary-menu" class="navbar-nav nav-menu">
+							<li class="menu-item-has-children dropdown">
+								<span>Cat</span>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="esp.htm">Esp</a>
+									</li>
+									<li>
+										<a href="eng.htm">Eng</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- ...Menu -->
+			</header>
+			<!-- ...Header -->
+			<!-- Main -->
+			<main id="primary" class="site-main">
+				<!-- Home Hero -->
+				<section class="home-hero">
+					<div class="home-hero__grid">
+						<div class="home-hero__text">
+							<h1>Solucions tècniques per requisits democràtics</h1>
+						</div>
+						<div class="home-hero__img"><img src="imgs/Portada.png" alt="" /></div>
+					</div>
+					<a href="https://decidim.org/partners/" target="_blank">
+						<div class="home-hero__banner">
+							<div class="big">1<sup>er</sup></div>
+							<p>Partner Oficial de</p>
+							<div class="icon small icon-decidim"></div>
+						</div>
+					</a>
+					<!-- Img Fullsize -->
+					<!-- <div class="bg__imgFullsize efecteParallax" data-pos="top" data-nom="Modul1">
+						<img src="imgs/servei_3.png" alt="" />
+					</div> -->
+					<!-- ...Img Fullsize -->
+				</section>
+				<!-- ...Home Hero -->
+
+				<!-- Modul 1 -->
+				<section id="serveis" class="modul serveis">
+					<!-- Contingut del modul -->
+					<div class="modul__grid">
+						<header class="modul__header">
+							<h2>Serveis</h2>
+							<p>
+								Creem aplicacions basades en el programari
+								<span class="destecat">Decidim<span class="asterisc">*</span></span> i
+								<span class="destecat">Ruby on Rails</span>. Les nostres especialitats són:
+							</p>
+						</header>
+						<p class="small">
+							<span class="asterisc">*</span> El 3% de cada pressupost per serveis Decidim es dona a l’Associació Decidim pel
+							manteniment oficial del projecte.
+						</p>
+						<div id="slider-serveis" class="modul__content--slider">
+							<!-- Add Arrows & Pagination -->
+							<div class="swiper-navigation">
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-prev">
+									<span class="icon medium icon-arrow--left"></span><span class="icon small icon-arrow--left"></span>
+								</div>
+								<div class="swiper-button-next">
+									<span class="icon medium icon-arrow--right"></span><span class="icon small icon-arrow--right"></span>
+								</div>
+							</div>
+							<!-- Cards -->
+							<div class="cards serveis swiper-wrapper">
+								<div class="card swiper-slide">
+									<div class="card__imatge"><img src="imgs/installacio.png" alt="" /></div>
+
+									<h3 class="card__titol">Instal·lació àgil</h3>
+									<p class="card__text">
+										Garantim una instal·lació ràpida i segura en el nostre servidor o en el vostre allotjament. S’instal·la
+										un entorn de test i un entorn de producció
+									</p>
+								</div>
+								<div class="card swiper-slide">
+									<div class="card__imatge"><img src="imgs/max_adaptacio.png" alt="" /></div>
+
+									<h3 class="card__titol">Adaptabilitat al màxim nivell</h3>
+									<p class="card__text">
+										Adaptem, millorem i desenvolupem el sistema de registre, la verificació i els mòduls de participació en
+										funció de les necessitats de cada tipus d’organització
+									</p>
+								</div>
+								<div class="card swiper-slide">
+									<div class="card__imatge"><img src="imgs/experiencia.png" alt="" /></div>
+
+									<h3 class="card__titol">Experiencia única</h3>
+									<p class="card__text">
+										El teu Decidim, la teva imatge. El teu Decidim, les teves prioritats. Amb la nostra metodologia Agile
+										participaràs de l’evolució del projecte
+									</p>
+								</div>
+								<div class="card swiper-slide">
+									<div class="card__imatge"><img src="imgs/creadors.png" alt="" /></div>
+
+									<h3 class="card__titol">Creadors del Decidim Awesome</h3>
+									<p class="card__text">
+										La nostra prioritat sempre és fer Decidim més usable i donar més flexibilitat a l’administrador. La
+										navalla suïssa en constant evolució que tot administrador de la plataforma necessita
+									</p>
+								</div>
+								<div class="card swiper-slide">
+									<div class="card__imatge"><img src="imgs/suport.png" alt="" /></div>
+
+									<h3 class="card__titol">Suport tècnic i consultoria personalitzada</h3>
+									<p class="card__text">
+										Els nostres valors són: treballar amb qualitat, tractar bé a l’equip i tractar bé al client. No ens
+										agrada parlar amb vocabulari tècnic, però si ens encanten transformar els reptes polítics en solucions
+										tecnològiques!
+									</p>
+								</div>
+								<div class="card swiper-slide">
+									<div class="card__imatge"><img src="imgs/comunitat.png" alt="" /></div>
+
+									<h3 class="card__titol">Comunitat internacional</h3>
+									<p class="card__text">
+										Benvinguda al codi obert! Compartim i cooperem amb altres organitzacions de la comunitat. Som impulsors
+										de la xarxa internacional de proveïdors Decidim: DICE
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<script>
+					window.addEventListener("load", () => {
+						const swiper = new Swiper("#slider-serveis", {
+							autoplay: false,
+							loop: false,
+							pagination: {
+								el: ".swiper-pagination",
+								type: "fraction",
+							},
+							navigation: {
+								nextEl: ".swiper-button-next",
+								prevEl: ".swiper-button-prev",
+							},
+							breakpoints: {
+								320: {
+									slidesPerView: 1,
+									spaceBetween: 16,
+								},
+								768: {
+									slidesPerView: 2,
+									spaceBetween: 32,
+								},
+								1024: {
+									slidesPerView: 3,
+									spaceBetween: 32,
+								},
+								1440: {
+									slidesPerView: 3,
+									spaceBetween: 32,
+								},
+								1920: {
+									slidesPerView: 4,
+									spaceBetween: 32,
+								},
+							},
+						});
+					});
+				</script>
+				<!-- ...Modul 1 -->
+				<!-- Modul 2 -->
+				<section id="clients" class="modul clients">
+					<!-- Contingut del modul -->
+					<div class="modul__grid">
+						<div class="clients__img"><img src="imgs/clients.png" alt="" /></div>
+						<header class="modul__header clients__header">
+							<h2>Clients</h2>
+							<p>
+								Col·laborem amb <span class="destecat--negatiu">institucions públiques</span>,
+								<span class="destecat--negatiu">cooperatives</span>,
+								<span class="destecat--negatiu">moviments socials</span> i altres
+								<span class="destecat--negatiu">organizations amb comunitat</span>.
+							</p>
+						</header>
+						<div class="clients__logos">
+							<div class="clients__logos__container">
+								<img
+									src="imgs/clients/ajuntament_hospitalet.svg"
+									title="Ajuntament de l'Hospitalet"
+									alt="Ajuntament de l'Hospitalet"
+								/>
+								<img src="imgs/clients/getxo.svg" title="Getxo" alt="Getxo" />
+								<img
+									src="imgs/clients/ajuntament_olesa.svg"
+									title="Ajuntament d'Olesa de Montserrat"
+									alt="Ajuntament d'Olesa de Montserrat"
+								/>
+								<img src="imgs/clients/somenergia.svg" title="Som energia alt="Som energia" />
+								<img src="imgs/clients/statzofluzern.svg" title="Stadt of Luzern" alt="Stadt of Luzern" />
+								<img src="imgs/clients/coopcat.svg" title="Coopcat" alt="Coopcat" />
+								<img src="imgs/clients/colectic.svg" title="Colectic" alt="Colectic" />
+								<img src="imgs/clients/decidim.svg" title="Decidim" alt="Decidim" />
+								<img src="imgs/clients/pemb.svg" title="PEMB" alt="PEMB" />
+								<img
+									src="imgs/clients/forum.svg"
+									title="Fòrum de la Juventut d'Andorra"
+									alt="Fòrum de la Juventut d'Andorra"
+								/>
+								<img src="imgs/clients/green.svg" title="Green Party of Canada" alt="Green Party of Canada" />
+								<img src="imgs/clients/opensource.svg" title="OpensourcePolitics" alt="OpensourcePolitics" />
+								<img src="imgs/clients/seidor.svg" title="Seidor Opentrends" alt="Seidor Opentrends" />
+								<img src="imgs/clients/ajuntamentbcn.svg" title="Ajuntament de Barcelona" alt="Ajuntament de Barcelona" />
+								<img
+									src="imgs/clients/europeancapitalofdemocracy.svg"
+									title="European Capital of democracy"
+									alt="European Capital of democracy"
+								/>
+							</div>
+						</div>
+						<div class="modul__header clients__header-2">
+							<p>Els nostres clients diuen de nosaltres...</p>
+						</div>
+						<div id="slider-clients" class="modul__content--slider clients__slider">
+							<!-- Add Arrows & Pagination -->
+							<div class="swiper-navigation">
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-prev">
+									<span class="icon medium icon-arrow--left"></span><span class="icon small icon-arrow--left"></span>
+								</div>
+								<div class="swiper-button-next">
+									<span class="icon medium icon-arrow--right"></span><span class="icon small icon-arrow--right"></span>
+								</div>
+							</div>
+							<!-- Cards -->
+							<div class="cards-clients swiper-wrapper">
+								<div class="card-comentari swiper-slide">
+									<div class="card-comentari__avatar">
+										<div class="card-comentari__imatge"><img src="imgs/clients/getxo_color.svg" alt="" /></div>
+										<div class="card-comentari__box">
+											<h3 class="card-comentari__nom">Pedro Goicolea</h3>
+											<h4 class="card-comentari__carrec">Ayuntamiento de Getxo</h4>
+										</div>
+									</div>
+									<div class="card-comentari__text">
+										<p>
+											Ya va a cumplirse el segundo aniversario desde que el Ayuntamiento de Getxo se incorporó al universo
+											Decidim, creando su página de participación
+											<a href="https://zeugaz.getxo.eus/" target="_blank">www.zeugaz.getxo.eus</a>. Y desde nuestros primeros
+											pasos, antes de activar la página, Ivan y Pau fueron nuestros maestros Jedi. Nosotros, sus humildes
+											padawans. Siempre amables, pendientes, disponibles y precisos. Guiándonos en un camino que
+											desconocíamos. Pero… se fueron. Se fueron a volar por libre, a abrir su propia empresa. Les deseamos lo
+											mejor y les dijimos que les fuera de maravilla y esas cosas que se dicen cuando echas a alguien de
+											menos antes de que se vaya.
+										</p>
+
+										<p>
+											Solo decir que de nuevo estamos con los dos, en su nueva etapa de Pokecode. ¡Por algo será! Hemos
+											vuelto con ellos y comprobamos que siguen igual de amables, pendientes, disponibles y precisos. Mucha
+											suerte en vuestra nueva singladura.
+										</p>
+									</div>
+								</div>
+								<div class="card-comentari swiper-slide">
+									<div class="card-comentari__avatar">
+										<div class="card-comentari__imatge"><img src="imgs/clients/somenergia_color.svg" alt="" /></div>
+										<div class="card-comentari__box">
+											<h3 class="card-comentari__nom">Mònica Gifreu</h3>
+											<h4 class="card-comentari__carrec">Equip Som Energia</h4>
+										</div>
+									</div>
+									<div class="card-comentari__text">
+										<p>
+											A <b>Som Energia</b> treballem amb Pokecode, pel seu compromís en el desenvolupament del Decidim, com a
+											proveïdor oficial, i per la confiança en la seva professionalitat, resultat de l'experiència
+											compartida. El seu servei passa per un tracte pròxim, en el dia a dia, amb una forma de treball àgil i,
+											en la mirada més llarga, sabem que disposa dels coneixements necessaris per contribuir que el Decidim
+											sigui, cada cop més, una eina per les organitzacions.
+										</p>
+									</div>
+								</div>
+								<div class="card-comentari swiper-slide">
+									<div class="card-comentari__avatar">
+										<div class="card-comentari__imatge">
+											<img src="imgs/clients/stadtofluzern_color.svg" alt="Stadt of Luzern" />
+										</div>
+										<div class="card-comentari__box">
+											<h3 class="card-comentari__nom">Nadja von Ballmoos</h3>
+											<h4 class="card-comentari__carrec">Stadt of Luzern</h4>
+										</div>
+									</div>
+									<div class="card-comentari__text">
+										<p>
+											M'agrada molt treballar amb l'Ivan i el Pau perquè actuen com a socis, no només com a contractistes. És
+											de gran valor per a mi que comparteixin proactivament els seus coneixements sobre les nostres
+											necessitats i, d'aquesta forma, demostren la seva profunda comprensió de Decidim.
+										</p>
+									</div>
+								</div>
+								<div class="card-comentari swiper-slide">
+									<div class="card-comentari__avatar">
+										<div class="card-comentari__imatge">
+											<img src="imgs/clients/green_color.svg" alt="Green Party Canada" />
+										</div>
+										<div class="card-comentari__box">
+											<h3 class="card-comentari__nom">John Willson</h3>
+											<h4 class="card-comentari__carrec">Co-President of the GPC Fund</h4>
+										</div>
+									</div>
+									<div class="card-comentari__text">
+										<p>
+											Com a responsable de producte en telecomunicacions, he gestionat el desenvolupament de programari per
+											part d'equips als Estats Units, el Regne Unit, Alemanya, Israel i la Xina. Pokecode sempre compleix o
+											supera els estàndards d'aquests equips, lliurant programari fiable i responsable; abans del termini,
+											per sota del pressupost i amb informes clars i traçables. L'actitud atenta i amigable de l'equip de
+											Pokecode fa que la col·laboració amb ells sigui un goig i considerem la nostra col·laboració com un
+											factor clau en el èxit del projecte Decidim. Literalment no podríem haver-ho fet sense ells.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<script>
+					window.addEventListener("load", () => {
+						const swiper = new Swiper("#slider-clients", {
+							autoplay: true,
+							loop: true,
+							pagination: {
+								el: ".swiper-pagination",
+								type: "fraction",
+							},
+							navigation: {
+								nextEl: ".swiper-button-next",
+								prevEl: ".swiper-button-prev",
+							},
+							breakpoints: {
+								320: {
+									slidesPerView: 1,
+									spaceBetween: 16,
+								},
+								768: {
+									slidesPerView: 1,
+									spaceBetween: 32,
+								},
+								1024: {
+									slidesPerView: 1,
+									spaceBetween: 32,
+								},
+								1440: {
+									slidesPerView: 1,
+									spaceBetween: 32,
+								},
+								1920: {
+									slidesPerView: 2,
+									spaceBetween: 32,
+								},
+							},
+						});
+					});
+				</script>
+				<!-- ...Modul 2-->
+				<!-- Modul 3-->
+				<section id="equip" class="modul equip">
+					<!-- Contingut del modul -->
+					<div class="modul__grid">
+						<header class="modul__header equip__header">
+							<h2>Equip</h2>
+							<p>Per què darrera hi ha persones que t’ajudarem amb tot allò que necessites.</p>
+							<p>Mira la nostra <span class="destecat">Pokecodex!</span></p>
+						</header>
+						<div class="equip__img"><img src="imgs/gos.png" alt="" /></div>
+						<div class="modul__content equip__content">
+							<div class="card-equip">
+								<div class="card-equip__box-level">
+									<div class="card-equip__num">#1</div>
+									<div class="card-equip__level">LV2</div>
+								</div>
+								<div class="card-equip__img"><img src="imgs/ivan.png" title="Ivan Vergés" alt="Ivan Vergés" /></div>
+								<div class="card-equip__box-dades">
+									<div class="card-equip__avatar">
+										<img src="imgs/avatar_ivan.png" title="Ivan Vergés" alt="Ivan Vergés" />
+									</div>
+									<div class="card-equip__nom">Ivan Vergés</div>
+									<div class="card-equip__carrec">Cofundador</div>
+									<div class="card-equip__xarxes">
+										<a href="https://twitter.com/ivanverges" target="_blank"><span class="icon icon-twitter"></span></a>
+										<a href="https://github.com/microstudi" target="_blank"><span class="icon icon-github"></span></a>
+										<a href="https://meta.decidim.org/profiles/microstudi/activity?locale=ca" target="_blank"
+											><span class="icon icon-decidim-ico"></span
+										></a>
+									</div>
+								</div>
+							</div>
+							<div class="card-equip">
+								<div class="card-equip__box-level">
+									<div class="card-equip__num">#2</div>
+									<div class="card-equip__level">LV2</div>
+								</div>
+								<div class="card-equip__img"><img src="imgs/pau.png" title="Pau Parals" alt="Pau Parals" /></div>
+								<div class="card-equip__box-dades">
+									<div class="card-equip__avatar"><img src="imgs/avatar_pau.png" title="Pau Parals" alt="Pau Parals" /></div>
+									<div class="card-equip__nom">Pau Parals</div>
+									<div class="card-equip__carrec">Cofundador</div>
+									<div class="card-equip__xarxes">
+										<a href="https://twitter.com/paarals" target="_blank"><span class="icon icon-twitter"></span></a>
+										<a href="https://meta.decidim.org/profiles/paarals/activity?locale=ca" target="_blank"
+											><span class="icon icon-decidim-ico"></span
+										></a>
+									</div>
+								</div>
+							</div>
+							<div class="card-equip">
+								<div class="card-equip__box-level">
+									<div class="card-equip__num">#3</div>
+									<div class="card-equip__level">LV2</div>
+								</div>
+								<div class="card-equip__img"><img src="imgs/anna.png" title="Anna Topalidi" alt="Anna Topalidi" /></div>
+								<div class="card-equip__box-dades">
+									<div class="card-equip__avatar">
+										<img src="imgs/avatar_anna.png" title="Anna Topalidi" alt="Anna Topalidi" />
+									</div>
+									<div class="card-equip__nom">Anna Topalidi</div>
+									<div class="card-equip__carrec">Ruby on Rails developer</div>
+									<div class="card-equip__xarxes">
+										<a href="https://github.com/antopalidi" target="_blank"><span class="icon icon-github"></span></a>
+									</div>
+								</div>
+							</div>
+							<div class="card-equip">
+								<div class="card-equip__box-level">
+									<div class="card-equip__num">#4</div>
+									<div class="card-equip__level">LV0</div>
+								</div>
+								<div class="card-equip__img"><img src="imgs/elvia.png" title="Elvia Benedith" alt="Elvia Benedith" /></div>
+								<div class="card-equip__box-dades">
+									<div class="card-equip__avatar">
+										<img src="imgs/avatar_elvia.png" title="Elvia Benedith" alt="Elvia Benedith" />
+									</div>
+									<div class="card-equip__nom">Elvia Benedith</div>
+									<div class="card-equip__carrec">Ruby on Rails Developer</div>
+									<div class="card-equip__xarxes">
+										<a href="https://github.com/ElviaBth" target="_blank"><span class="icon icon-github"></span></a>
+										<a href="https://meta.decidim.org/profiles/ElviaBth/activity?locale=es" target="_blank"
+											><span class="icon icon-decidim-ico"></span
+										></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- ...Modul 3 -->
+
+				<!-- Footer -->
+				<footer id="contacte" class="modul footer">
+					<div class="modul__grid">
+						<div class="footer__logo"><span class="icon icon-pokecode"></span></div>
+						<p class="footer__adreca-1">
+							Carrer Concepció Arenal 165<br />
+							08027 Barcelona
+						</p>
+						<p class="footer__adreca-2">+34 663 191 025<br /><a href="mailto:info@pokecode.net"> info@pokecode.net</a></p>
+						<div class="footer__xarxes">
+							<p>Segueix-nos:</p>
+							<ul>
+								<li>
+									<a href="https://github.com/openpoke" target="_blank"><span class="icon icon-github"></span></a>
+								</li>
+								<li>
+									<a href="https://meta.decidim.org/profiles/Pokecode/members?locale=ca" target="_blank"
+										><span class="icon icon-decidim-ico"></span
+									></a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__legal">
+							<p>2023 PokeCode. Made with ❤️ by PokeCode</p>
+							<ul class="footer__legal-menu">
+								<li><a href="politica_de_privacitat.htm">Política de privacitat</a></li>
+								<li><a href="avis_legal.htm">Avís legal</a></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
+			</main>
+			<!-- ...Main -->
+		</div>
+		<!-- Javascripts -->
+		<script src="js/navigation.js" type="text/javascript"></script>
+		<script src="js/menu.js" type="text/javascript"></script>
+		<script src="js/animation.js" type="text/javascript"></script>
+		<script src="js/divScrollApear_gsap.js" type="text/javascript"></script>
+		<script src="js/headerSticky.js" type="text/javascript"></script>
+		<script src="js/parallax.js" type="text/javascript"></script>
+
+		<!-- ...Javascripts -->
+	</body>
+</html>

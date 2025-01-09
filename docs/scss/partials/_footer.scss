@@ -1,0 +1,103 @@
+// Footer
+
+.footer {
+	&.modul {
+		background-color: var(--c-primary);
+	}
+
+	.modul__grid {
+		padding-block: 7.2rem 3.2rem;
+		@media (max-width: $bp-mobile-big) {
+			row-gap: 1rem;
+			align-items: flex-start;
+		}
+	}
+
+	&__logo {
+		grid-column: 1 / 3;
+		font-size: 4rem;
+		color: var(--c-black);
+		margin-top: -1rem;
+	}
+
+	&__adreca-1 {
+		grid-column: 4 / 7;
+	}
+
+	&__adreca-2 {
+		grid-column: 7 / 10;
+	}
+
+	p {
+		font-size: 17px;
+		line-height: 153%;
+
+		a {
+			@include efecte-link2(var(--c-primary), var(--c-black));
+		}
+	}
+
+	&__xarxes {
+		grid-column: 10 / -1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 0.8rem;
+		@media (max-width: $bp-mobile-big) {
+			flex-direction: column;
+		}
+
+		ul {
+			display: flex;
+			align-items: center;
+			gap: 0.8rem;
+			li {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 2.4rem;
+				height: 2.4rem;
+				padding: 2.4rem;
+				border-radius: 100%;
+				background-color: var(--c-white);
+				font-size: var(--fs-40);
+				a {
+					color: var(--c-black);
+				}
+			}
+		}
+	}
+
+	&__legal {
+		grid-column: 1 / -1;
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $bp-mobile-big) {
+			flex-direction: column;
+			margin-top: 2.4rem;
+		}
+
+		p {
+			font-size: 14px;
+		}
+		&-menu {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2.45rem;
+			column-gap: 1.6rem;
+
+			@media (max-width: $bp-mobile-big) {
+				row-gap: 0;
+			}
+
+			li {
+				font-size: 14px;
+				line-height: 128%;
+
+				a {
+					@include efecte-link2(var(--c-primary), var(--c-black));
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,108 @@
+// Botons
+
+.btn {
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--c-primary);
+	padding: 2.5rem 3.3rem 2.1rem;
+	@include efecte-boto;
+	@media (max-width: $bp-mobile-big) {
+		width: 100%;
+	}
+
+	&__label {
+		font-size: var(--fs-17);
+		color: var(--c-white);
+		@include efecte-boto__label;
+	}
+
+	&__icon {
+		font-size: 1.7rem;
+		color: var(--c-white);
+		@include efecte-boto__icon;
+	}
+
+	&--icon-right {
+		& > .btn__icon {
+			margin-left: 0.5em;
+		}
+	}
+	&--icon-left {
+		& > .btn__icon {
+			margin-right: 0.5em;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+		background-color: var(--c-primary-hover);
+
+		.btn__label {
+			color: var(--c-white);
+		}
+
+		.btn__icon {
+			color: var(--c-white);
+		}
+
+		.btn__icon > #icon-plus {
+			fill: white;
+		}
+	}
+
+	&.negatiu {
+		background-color: var(--c-white);
+
+		.btn__label {
+			color: var(--c-primary);
+		}
+
+		.btn__icon {
+			color: var(--c-primary);
+		}
+
+		&:hover {
+			cursor: pointer;
+			background-color: var(--c-white);
+
+			.btn__label {
+				color: var(--c-black);
+			}
+
+			.btn__icon {
+				color: var(--c-black);
+			}
+
+			.btn__icon > #icon-plus {
+				color: var(--c-black);
+			}
+		}
+	}
+}
+
+// Botons Close, Arrow...
+
+.btn-close,
+.btn-arrow,
+.btn-burger {
+	z-index: 2;
+	display: flex;
+	overflow-y: hidden;
+	align-items: center;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	.icon {
+		font-size: var(--fs-48);
+		color: var(--c-white);
+	}
+}
