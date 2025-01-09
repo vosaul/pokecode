@@ -9,7 +9,7 @@ title: "PokeCode.net :: Digital Solutions for the democracy of the XXI century"
 description: "Developing Digital democracy and participation based on Decidim and Ruby on Rails."
 
 # color theme for links
-theme-color: stone # indigo|yellow|pink|green|stone|
+theme-color: green # indigo|yellow|pink|green|stone|
 
 languages: ["en", "ca"]
 exclude_from_localizations: ["assets"]
